@@ -1,0 +1,2 @@
+primary-color = #550000
+secondary-color = #f9e5e5
