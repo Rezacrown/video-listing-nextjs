@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 
+import { headers } from "next/headers";
+
 import "./globals.css";
 
 import Navbar from "./components/Navbar";
@@ -20,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} bg-accent overflow-x-hidden`}>
+      <body
+        className={`${poppins.className} bg-accent overflow-x-hidden text-black`}
+      >
         <Navbar />
         {children}
         <Footer />

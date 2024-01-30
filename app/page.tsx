@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Search from "./components/Search";
 import { CardItems } from "./components/CardItems";
 import Link from "next/link";

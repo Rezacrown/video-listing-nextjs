@@ -1,8 +1,10 @@
 "use client";
-import React from "react";
-import { DropDownMobile } from "../DropdownMobile";
-import { usePathname } from "next/navigation";
+
+import { Button } from "@/components/ui/button";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Navbar_Mobile_version from "./mobile";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -16,7 +18,7 @@ export default function Navbar() {
             Vid<span className="text-red-400 italic">lays</span>
           </h3>
         </Link>
-        {/* navigation destop */}
+        {/* destop navigation */}
         <div className="mx-auto hidden lg:block ">
           <ul className="flex text-xl gap-x-8">
             <Link
@@ -24,6 +26,14 @@ export default function Navbar() {
               className={`${pathname == "/" ? "text-primary" : "text-black"}`}
             >
               Home
+            </Link>
+            <Link
+              href={"/"}
+              className={`${
+                pathname == "/dashboard" ? "text-primary" : "text-black"
+              }`}
+            >
+              Dashboard
             </Link>
             <Link
               href={"/featured"}
@@ -41,11 +51,31 @@ export default function Navbar() {
             >
               Subscription
             </Link>
+
+            {/* auth button */}
+            <div className="flex gap-x-5 ml-20">
+              <Button
+                type="button"
+                variant="outline"
+                size={"lg"}
+                className="px-6 font-medium outline-primary-foreground outline hover:text-primary duration-300"
+              >
+                Sign In
+              </Button>
+              <Button
+                type="button"
+                size={"lg"}
+                variant="destructive"
+                className="px-6"
+              >
+                Log out
+              </Button>
+            </div>
           </ul>
         </div>
-        {/* navigation mobile */}
-        <div className="mr-10 block lg:hidden">
-          <DropDownMobile />
+        {/* mobile navigation */}
+        <div className="ml-10 block lg:hidden">
+          <Navbar_Mobile_version pathname={pathname} />
         </div>
       </div>
     </div>

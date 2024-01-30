@@ -18,10 +18,19 @@ export function CardItems({ className }: { className?: string }) {
     <Card
       className={`${className} flex justify-center p-2 items-center shadow-md border shadow-[red]`}
     >
-      <VideoPlayer
+      {/* <VideoPlayer
         height={"100%"}
         widht={"100%"}
         url={"https://youtu.be/1MqozxAvmsc?si=NG-hwBiQlt3vVfY_"}
+      /> */}
+      <Image
+        src={
+          "https://th.bing.com/th/id/OIP.MnXgjCyAoAtfjgBBIa627QHaE7?rs=1&pid=ImgDetMain"
+        }
+        alt=""
+        width={100}
+        height={100}
+        className="w-full"
       />
     </Card>
   );

@@ -10,6 +10,10 @@ const nextConfig = {
         hostname: "i.ytimg.com",
         protocol: "https",
       },
+      {
+        hostname: "th.bing.com",
+        protocol: "https",
+      },
     ],
   },
 };
